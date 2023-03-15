@@ -1,0 +1,97 @@
+.content{
+    .singleMovie{
+        padding: 3rem 5rem;
+        color: rgb(225, 221, 221);
+        align-items: center;
+        gap: 2rem;
+        .left{
+            width: 30%;
+        }
+        .right{
+            width: 70%;
+            h1{
+                margin: 0;
+                text-align: start;
+                font-size: 2.5rem;
+            }
+            ul{
+                display: flex;
+                align-items: center;
+                justify-content:flex-start;
+                // flex: 1 0 1;
+                flex-wrap: wrap;
+                list-style: none;
+                gap: 1rem;
+                margin: 2rem 0;
+                li{
+                    font-size: 1rem;
+                    font-weight: 600;
+                    padding: .5rem 1rem;
+                    background-color: #1A242F;
+                    color: white;
+                    border-radius: 5px;
+                }
+            }
+            .details{
+                font-size: 1.2rem;
+                line-height: 1.5;
+                margin-top: .7rem;
+                span{
+                    margin-right: 1.5rem;
+                    display: inline-block;
+                    font-weight: 700;
+                    font-size: 1.5rem
+                }
+            }
+            .plot{
+                @extend .details;
+                margin-top: 3rem;
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width:31em) {
+    .content{
+        .singleMovie{
+            padding: 0rem 0rem;
+            display: block;
+            .left{
+                display: grid;
+                place-items: center;
+                img{
+                    height: 300px;
+                }
+            }
+             .right{
+                padding: 0;
+                h1{
+                    font-size: 2rem;
+                }
+             }
+        }
+    }
+}
+
+@media screen and (max-width:58em){
+    .content{
+        .singleMovie{
+            padding: 0rem 0rem;
+            display: block;
+            .left{
+                display: grid;
+                place-items: center;
+                width: 100%;
+            }
+             .right{
+                width: 100%;
+                padding: 0;
+                h1{
+                    margin: 1rem 0;
+                }
+                
+             }
+        }
+    }
+}
